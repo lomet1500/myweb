@@ -26,7 +26,7 @@
     %>
 
     <%
-        String[] userJob = request.getParameterValues("job");
+    String[] userJob = request.getParameterValues("job");
     %>
     <%
     for (String user : userJob) {
@@ -41,6 +41,17 @@
     %>
     <%
     for (String user : userHobby) {
+    %>
+    <h3><%=user%></h3>
+    <%
+    }
+    %>
+    %>
+    <%
+        String[] userHobby = request.getParameterValues("so");
+    %>
+    <%
+    for (String user : userSo) {
     %>
     <h3><%=user%></h3>
     <%

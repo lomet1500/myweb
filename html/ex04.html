@@ -8,7 +8,7 @@
     </head>
     <body>
         <!--ex04.jsp 입력값을 화면에 출력, p.191-->
-        <form action="input.jsp" method="get"></form>
+        <form action="input.jsp" method="get">
         아 이 디:
         <input type="text" name="user_name" id="user_name">
         <input type="submit" value="ID중복검사">
@@ -72,11 +72,11 @@
         
        
             <h3 style="font-weight:normal;">자기소개:
-                <textarea cols="100" rows="10" spellcheck=""></textarea>
+                <textarea cols="100" rows="10" spellcheck="" name ="so"></textarea>
                 <p></p>
             </h3>
+            <input type="submit" value="등록">
+            <input type="reset" value="초기화">
         </form>
-        <input type="submit" value="등록">
-        <input type="reset" value="초기화">
     </body>
 </html>
