@@ -4,57 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>html/js.html</title>
+    <script>
+    console.log("head영역");
+    // document.getElementById('show').innerHTML = "Happy";
+    </script>
+    <style>
+        .title{
+            background-color: yellow;
+        }
+        .data{
+            background-color: yellowgreen;
+        }
+    </style>
 </head>
 <body>
     <div id="show">Hello</div>
     <ul id="fruit">
-        <!-- <li>Apple</li>
-        <li>Orange</li>  -->
+        <li>Apple</li>
+        <li>Orange</li> 
     </ul> <!-- -->
-    <table id="tbl" border="1" style="color:thistle;">
-        <tr>
-            <td>Name</td>
-            <td>age</td>
+    <table id="tbl" border="1" style="color:turquoise;">
+         <!-- <tr>
+            <td class='title'>Name</td>
+            <td class='title'>age</td>
         </tr>
         <tr>
             <td>Hong</td>
             <td>15</td>
-        </tr>
+        </tr>  -->
     </table>
+    <script src="../js/table.js">
+    </script>
     <script>
-        var name = document.getElementById('show').innerHTML;
-        console.log(name);
-        document.getElementById('show').innerHTML = "world";
-
-        var divTag = document.createElement("div");
-        divTag.innerHTML ="Nice"; //<div>Nice</div>
-
-        document.getElementById('show').append(divTag);
-
-        var li_1 = document.createElement("li");
-        var li_2 = document.createElement("li");
-        li_1.innerHTML ="Apple";  //<li>Apple</li>
-        li_2.innerHTML ="Orange"; //<li>Orange</li>
-
-        document.getElementById("fruit").append(li_1);
-        document.getElementById("fruit").append(li_2);
-
-        //////////////////////////////////////////////
-        var grade = 6;
-        for(var i =1; i <= 9; i++){
-           console.log(grade + ' * '+ i + ' = ' + (grade*i));
-        // var str= grade + ' * '+ i + ' = ' + (grade*i);
-        // console.log(str);
-        }
-        //결과값: 5050 입니다.
-        var num = 0;
-        for(var t =1; t<=100; t++) {
-            num = num + t;
-        }
-        {
-           document.write("결과값: " + num + "입니다.");
-        }
-
+        console.log("body영역");
+        document.getElementById('show').innerHTML = "Happy";
     </script>
 </body>
 </html>
