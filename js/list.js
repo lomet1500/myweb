@@ -7,9 +7,9 @@ function myFunc(){
     document.write('<ul>');
     for(let i = 1; i <=10; i++) {
         if(i % 2 == 1){
-            document.write('<li class="even">' + dan + ' * ' + i + ' = <b>' + (dan*i) + '</b>' + '</li>');
+            document.write("<table border='1'>"+ "<td>" + '<li class="even">' + dan + ' * ' + i + "</td>" + "<td>" +' = <b>' +"</td>" + "<td>"+ (dan*i) + '</b>' + '</li>'+"</td>"+"</table>");
         }else{
-            document.write('<li class="odd">' + dan + ' * ' + i + ' = <b>' + (dan*i) + '</b>' + '</li>');
+            document.write("<table border='1'>"+ "<td>" +'<li class="odd">' + dan + ' * ' + i + "</td>" + "<td>" +' = <b>' + "</td>" + "<td>"+ (dan*i) + '</b>' + '</li>'+"</td>"+"</table>");
         }
     }
     function tableCreate(){
