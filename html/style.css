@@ -1,0 +1,21 @@
+/* html.style.css */
+
+     h1 {
+        color: white;
+        font-size: 15px;
+        background-color: navy;
+    }
+    header > h1{ 
+        /* >:자식 */
+        background-color: olive;
+    }
+    content h1{ 
+        /* 스페이스, 자손 */
+        font-size: 10px;
+    }
+    #first{
+        color: orange;
+    }
+    header .first{
+        color:yellow;
+    }
