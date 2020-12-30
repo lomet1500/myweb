@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cal.html</title>
+</head>
+<body>
+    <div id="show"></div>
+    <script>
+
+        function createHeader(a,b,c){
+            tdTag = document.createElement('td');
+            tdTag.innerHTML = a;
+            trTag.append(tdTag);
+            tableTag.append(trTag);
+        }
+
+        function createData(a1,b1,c1){
+            if( b1 % 7 == 0){
+            trTag = document.createElement('tr');
+            }
+            tdTag = document.createElement('td');
+            tdTag.innerHTML = a1;
+            trTag.append(tdTag);
+            tableTag.append(trTag);
+
+        }
+
+    let days = ['Sun','Mon','Tue','Wed','Thr','Fri','Sat'];
+    let dates = [];
+    for(let i = 1; i <= 31; i++){
+        dates.push(i);
+    }
+    let tableTag = document.createElement('table');
+        tableTag.setAttribute('border','1');
+        tableTag.setAttribute('id','tbl');
+        
+        // console.log(tableTag);
+        let trTag = document.createElement('tr');
+        
+        days.forEach(createHeader);
+        
+        dates.forEach(createData);
+        
+        document.getElementById('show').append(tableTag);
+        
+        // let days = ['Sun','Mon','Tue','Wed','Thr','Fri','Sat'];
+        // let table = document.createElement('table');
+        // let tr = document.createElement('tr');
+        
+        // for(let i = 0; i < days.length; i++){
+        // let td = document.createElement('th');
+
+        //     td.innerHTML = days[i];
+        //     console.log(td);
+        //     tr.append(td);
+            
+        // }
+        // table.append(tr);
+        // table.setAttribute('border','1');
+        // document.getElementById('show').append(table);
+
+        // let trTag = document.createElement('tr');
+        // for(let i = 1; i <= 31; i++){
+        //     let td = document.createElement('td');
+        //     td.innerHTML = i;
+        //     trTag.append(td);
+        //     if(i % 7 == 1){
+        //         td.setAttribute('style','color: red;')
+        //     }else if(i % 7 == 0) {
+        //         td.setAttribute('style','color: blue;')
+        //         table.append(trTag);
+        //         trTag = document.createElement('tr');
+        //     }
+        // }
+        // table.append(trTag);
+        // document.getElementById('show').append(table);
+        
+    </script>
+</body>
+</html>

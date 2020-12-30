@@ -6,8 +6,8 @@ function input(){
     let input = document.createElement('input');
 }
 
-let  = document.createElement('table');
-    tableTag.setAttribute('border','1');
+let  = document.createElement('input');
+    
 
 function drawTable(){
    

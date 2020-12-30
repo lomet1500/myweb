@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>form.html</title>
+        <style>
+            table {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <table border='1' id='tbl'>
+            <tr>
+                <td>
+                    <label for="id">ID</label><input type="radio" name="id" id="id"></td>
+                <td>홍길동</td>
+                <td>20세</td>
+                <td>독서</td>
+                <td>
+                    <button>OK</button>
+                </td>
+            </tr>
+            <!-- <tr> <td><label for="id">ID</label><input type="checkbox" name="id"
+            id="id"></td> <td>홍길동</td> <td>20세</td> <td>독서</td> <td> <button>OK</button>
+            </td> </tr> -->
+        </table>
+        <script>
+            function createData(a, b) {
+                tr = document.createElement('tr');
+                td = document.createElement('td');
+                let label = document.createElement('label');
+                label.setAttribute('for', 'check');
+                label.innerHTML = 'id';
+                tr.append(td);
+                td.append(label);
+                let checkbox = document.createElement('input');
+                checkbox.setAttribute('type', 'checkbox');
+                checkbox.setAttribute('name', 'check');
+                checkbox.innerHTML = '';
+                td.append(checkbox);
+
+                for (num of field) {
+                    td = document.createElement('td');
+                    td.innerHTML = a[num];
+                    tr.append(td);
+
+                }
+                td = document.createElement('td');
+                
+                let btn = document.createElement('button');
+                btn.innerHTML = 'ok';
+                td.append(btn);
+                tr.append(td);
+                tbl.append(tr);
+                
+                
+            }
+
+            let members = [];
+
+            for (let i = 1; i <= 3; i++) {
+                let member = {};
+                member.name = '홍길동' + i;
+                member.age = 20 + i + '세';
+                member.hobby = '독서' + i;
+                members.push(member);
+            }
+
+            let field = ['name', 'age', 'hobby'];
+            let show = document.createAttribute('show');
+            let table = document.createAttribute('tbl');
+            let tr,
+                td;
+            members.forEach(createData);
+        </script>
+    </body>
+</html>
