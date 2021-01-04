@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom.html</title>
+    <style>
+        #container{
+            width: 400px;
+            height: 400px;
+            background-color: yellow;
+            position: relative;
+        }
+        #animate{
+            width: 300px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+            
+        }
+    </style>
+</head>
+<body>
+    <button id='btn'>Move Start</button>
+   <div id="container">
+       <div id="animate"></div>
+   </div>
+   <script>
+       setInterval(() => {
+          document.getElementById('animate').innerHTML = new Date();
+       }, 1000);
+       let btn = document.getElementById('btn');
+       btn.onclick = moveStart;
+       
+       function moveStart(){
+        console.log('start');
+        let animate = document.getElementById("animate");
+        let i = 0;
+            let myInterval = setInterval(function (){
+                i++;
+        animate.style.left = i  + 'px';
+        animate.style.top = i  + 'px';
+        if(i == 350)
+            clearInterval(myInterval);
+        }, 10);
+
+       
+       }
+       
+   </script>
+    <!-- <script>
+       // 구구단을 생성.
+       // function makeMulti(val);
+       // 테이블 형식.
+    //    function makeMulti(){
+    //    let table = document.createElement('table');
+    //    table.setAttribute('border','1');
+    //    let tr = document.createElement('tr');
+    //    let td = document.createElement('td');
+    //     let val = 5;
+    //     for(let e = 1; e <= 9; e++) {
+    //         td = document.createElement('td');
+    //         td.innerHTML = val; 
+    //         tr.append(td);
+            
+            
+    //     }
+    //    }
+        
+    </script> -->
+</body>
+</html>
